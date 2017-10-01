@@ -1,20 +1,15 @@
 import React, { Component } from 'react';
 import './LandingPage.css';
 import logo from './logo.png';
-<<<<<<< HEAD
-import { Route, Link, withRouter } from "react-router-dom";
-import FaFacebook from 'react-icons/lib/fa/facebook-square';
-import FaLinkedin from 'react-icons/lib/fa/linkedin-square';
-import FaGoogle from 'react-icons/lib/fa/google-plus-square';
+
 import Client from "../../Client";
 
-=======
 import { NavLink, Route, Redirect, BrowserRouter as Router, Link} from "react-router-dom";
 import FaFacebook from 'react-icons/lib/fa/facebook-square';
 import FaLinkedin from 'react-icons/lib/fa/linkedin-square';
 import FaGoogle from 'react-icons/lib/fa/google-plus-square';
 import InterestSkills from '../InterestSkills/InterestSkills';
->>>>>>> 12189e32f24c8a4875c7b36181476e0f130f6baf
+
 
 class LandingPage extends Component {
 
@@ -58,20 +53,13 @@ class LandingPage extends Component {
 		});
 	}
 
-<<<<<<< HEAD
 	handleSubmit = (e) => {
-		e.preventDefault();
+		//e.preventDefault();
 				// Create user and redirect to website home page
-=======
-	handleSubmit = () => {
-
-		//Collect data and send to next stage (interestSkills)
->>>>>>> 12189e32f24c8a4875c7b36181476e0f130f6baf
 		alert("Name: " + this.state.userName + " " +
 			"Email: " + this.state.userEmail + " " +
 			"Password: " + this.state.userPwd);
-
-<<<<<<< HEAD
+		/*
 		const name = this.state.userName;
 		const email = this.state.userEmail;
 		const pwd = this.state.userPwd;
@@ -79,15 +67,11 @@ class LandingPage extends Component {
 		Client.create_user(name, email, pwd, (data) => {
 			console.log("(LandingPage) user account created! new user data: ", data);
 			alert("user account created! new user id: "+ data.id);
-			/* navigate to home page */
-			console.log("history: ", hist);
-			hist.push('/home', {isLoggedIn: true, uid: data.id, name: data.name}); 
+			 navigate to home page 
+			//console.log("history: ", hist);
+			//hist.push('/home', {isLoggedIn: true, uid: data.id, name: data.name}); 
 		});
-		
-		// Redirect user to home page
-=======
-		// Redirect to interestSkills page
->>>>>>> 12189e32f24c8a4875c7b36181476e0f130f6baf
+		*/
 	}
 
 	purposeful_Signup = () => {
@@ -120,14 +104,8 @@ class LandingPage extends Component {
 						</div>
 						<div className="row fullrow">
 							<div className="input-field col s4 push-s4">
-<<<<<<< HEAD
-								<input placeholder={this.state.userPwd} onChange={this.userPwdSet} className="active validate" type="text" name="Password" required />
-							</div>
-							<br />
-=======
 								<input placeholder={this.state.userPwd} onChange={this.userPwdSet} className="active validate" type="password" name="Password" required />
 							</div><br />
->>>>>>> 12189e32f24c8a4875c7b36181476e0f130f6baf
 						</div>
 						<div className="row fullrow">
 							<div className="col s4 push-s4">
@@ -191,4 +169,4 @@ class LandingPage extends Component {
 	}
 }
 
-export default withRouter(LandingPage);
+export default LandingPage;
