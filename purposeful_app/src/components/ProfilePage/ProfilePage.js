@@ -136,7 +136,6 @@ class ProfilePage extends Component {
 				break;
 		}
 		if(toggle_state){
-			console.log("BEFORE THE IF");
 			if(button_or_text === "button"){
 				return(
 					<button onClick={() => this.toggle(to_toggle)} className="btn-flat profile-text right">
@@ -144,7 +143,6 @@ class ProfilePage extends Component {
 					</button>
 				);
 			} else {
-				console.log("EVER GETS HERE");
 				return(
 					<div className="input-field">
 						<input value={text} type="text" className="active"></input>
@@ -422,7 +420,6 @@ class ProfilePage extends Component {
 	}
 
 	change_picture(){
-		console.log(this.state.changePicture);
 		if(this.state.changePicture){
 			return(
 				<div className="row">
@@ -447,6 +444,18 @@ class ProfilePage extends Component {
 		}
 	}
 
+	editAccount(){
+		console.log("edit");
+	/*	return(
+			<div id="myModal" className="modal">
+  			<div className="modal-content">
+    			<span className="close">&times;</span>
+    			<p>Some text in the Modal..</p>
+  			</div>
+			</div>
+		);*/
+	}
+
 	displayDesktop(){
 		return(
 			<div>
@@ -460,7 +469,9 @@ class ProfilePage extends Component {
 						</div>
 						{this.change_picture()}
 						<div className="row">
-							<button className="btn waves-effect light-green"> Edit your account information  <FaPencil> </FaPencil> </button>
+							<button className="btn waves-effect light-green" onClick={this.editAccount()}>
+								Edit your account information  <FaPencil> </FaPencil>
+							</button>
 						</div>
 
 						<div className="row"> <p> </p> </div>
