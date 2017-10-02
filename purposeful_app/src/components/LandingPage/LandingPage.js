@@ -166,4 +166,4 @@ class LandingPage extends Component {
 	}
 }
 
-export default withRouter(LandingPage);
+export default LandingPage;
