@@ -4,8 +4,6 @@ var Sequelize = require("../models/pg_database.js").Sequelize;
 var express = require('express');
 var router = express.Router();
 
-
-
 /**	
 	This HTTP POST function creates a new user entry in the users table with the 
 * name and email arguments provided in the request.

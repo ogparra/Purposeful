@@ -56,19 +56,17 @@ class LandingPage extends Component {
 		alert("Name: " + this.state.userName + " " +
 			"Email: " + this.state.userEmail + " " +
 			"Password: " + this.state.userPwd);
-		/*
+		
 		const name = this.state.userName;
 		const email = this.state.userEmail;
 		const pwd = this.state.userPwd;
-
+		
+		// Call Client.js file and create user 
 		Client.create_user(name, email, pwd, (data) => {
 			console.log("(LandingPage) user account created! new user data: ", data);
 			alert("user account created! new user id: "+ data.id);
-			 navigate to home page 
-			console.log("history: ", hist);
-			hist.push('/home', {isLoggedIn: true, uid: data.id, name: data.name}); 
 		});
-		*/
+		
 		// Redirect user to home page
 	}
 

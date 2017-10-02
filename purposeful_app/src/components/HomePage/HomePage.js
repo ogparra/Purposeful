@@ -16,8 +16,6 @@ class HomePage extends Component {
 
 	}
 
-
-
 	componentDidMount () {
 		console.log("(HOMEPAGE.JS) componentDidMount history:", this.props.history);
 
